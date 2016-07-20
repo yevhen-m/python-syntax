@@ -92,6 +92,7 @@ syn keyword pythonAsync		async await
 
 " Generators (yield from: Python 3.3)
 syn match pythonInclude   "\<from\>" display
+syn match pythonInclude "\<from\s\.\+\simport\>" display
 syn match pythonStatement "\<yield\>" display
 syn match pythonStatement "\<yield\s\+from\>" display
 
@@ -336,7 +337,7 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonEscape		Special
 
   " Classes, Functions
-  HiLink pythonClass    Type
+  HiLink pythonClass    Function
   HiLink pythonFunction Function
 
   if !exists("python_no_number_highlight")
