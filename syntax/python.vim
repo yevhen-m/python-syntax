@@ -322,7 +322,6 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonStatement	Statement
   HiLink pythonConditional	Conditional
   HiLink pythonRepeat		Repeat
-  HiLink pythonOperator		Operator
   HiLink pythonException	Exception
   HiLink pythonInclude		Include
   HiLink pythonAsync		Statement
@@ -361,8 +360,8 @@ if version >= 508 || !exists("did_python_syn_inits")
     HiLink pythonSelf Identifier
   endif
   if !exists("python_no_operator_highlight")
-    HiLink pythonExtraOperator       Operator
-    HiLink pythonExtraPseudoOperator Operator
+    HiLink pythonExtraOperator       pythonOperator
+    HiLink pythonExtraPseudoOperator pythonOperator
   endif
   if !exists("python_no_parameter_highlight")
     HiLink pythonBrackets           Normal
